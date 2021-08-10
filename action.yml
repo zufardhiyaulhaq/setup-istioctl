@@ -1,0 +1,15 @@
+name: 'Istioctl installer'
+description: 'Install a specific version of istioctl binary. Acceptable values are latest or any semantic version string like 1.9.7'
+inputs: 
+  version:
+    description: 'Version of istioctl'
+    required: true
+    default: '1.9.7'
+outputs:
+  istioctl-path:
+    description: 'Path to the cached istioctl binary'
+branding:
+  color: 'blue'
+runs:
+  using: 'node12'
+  main: 'dist/index.js'

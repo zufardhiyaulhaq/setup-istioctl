@@ -1,0 +1,18 @@
+name: CI
+
+on:
+  push:
+    branches:
+      - master
+
+jobs:
+  istioctl:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Checkout 
+      uses: actions/checkout@v2
+    - name: Setup Istioctl
+      uses: ./
+    - name: Check Istioctl
+      run: |
+        istioctl version --remote=false
