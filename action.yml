@@ -1,5 +1,5 @@
 name: 'Istioctl installer'
-description: 'Install a specific version of istioctl binary. Acceptable values are latest or any semantic version string like 1.9.7'
+description: 'Install a specific version of istioctl binary. Acceptable values are latest or any semantic version string like 1.17.1'
 inputs: 
   version:
     description: 'Version of istioctl'
@@ -11,5 +11,5 @@ outputs:
 branding:
   color: 'blue'
 runs:
-  using: 'node12'
+  using: 'node16'
   main: 'dist/index.js'
